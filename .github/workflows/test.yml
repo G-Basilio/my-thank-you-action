@@ -4,12 +4,12 @@ on:
   pull_request:
     types: [opened]
 
-    jobs:
-      test:
-        runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v2
-          - uses: ./
-            witch:
-              GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-              TENOR_TOKEN: ${{secrets.TENOR_TOKEN}}
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./
+        witch:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          TENOR_TOKEN: ${{secrets.TENOR_TOKEN}}
